@@ -12,6 +12,7 @@ export default defineConfig({
     vue(),
     vueDevTools(),
   ],
+  base: '/dlc-documents/',
   build: {
     rollupOptions: {
       input: {
