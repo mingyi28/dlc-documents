@@ -42,19 +42,19 @@ export default defineComponent({
               expanded: false,
               children: [
                 { text: '介绍', link: '/account/mobile/introduction' },
-                { text: '从哪里开始', link: '/account/mobile/where-do-i-start' },
+                { text: '从哪里开始', link: '/account/mobile/WhereDoIStart' },
                 { text: 'Unity集成', link: '/account/mobile/unity' },
-                { text: 'Unreal集成', link: '/account/mobile/unreal' },
-                { text: 'web集成', link: '/account/mobile/unreal' },
+                { text: 'Unreal集成', link: '/account/mobile/Unreal' },
+                { text: 'web集成', link: '/account/mobile/Unreal' },
                 { text: '案例研究', link: '/account/mobile/case-studies' },
                 {
                   text: '其他功能接入',
                   detailsExpanded: false,
                   details: [
-                    { text: '个人中心接入', link: '/account/mobile/unreal' },
-                    { text: '礼包接入', link: '/account/mobile/unreal' },
-                    { text: '安全接入', link: '/account/mobile/unreal' },
-                    { text: '合规配置', link: '/account/mobile/unreal' },
+                    { text: '个人中心接入', link: '/account/mobile/Unreal' },
+                    { text: '礼包接入', link: '/account/mobile/Unreal' },
+                    { text: '安全接入', link: '/account/mobile/Unreal' },
+                    { text: '合规配置', link: '/account/mobile/Unreal' },
                     { text: '自定义UI/UX', link: '/account/mobile/case-studies' }
                   ]
                 },
@@ -94,7 +94,7 @@ export default defineComponent({
                 { text: '介绍', link: '/account/native-general/introduction' },
                 { text: '从哪里开始', link: '/account/native-general/where-do-i-start' },
                 { text: 'Unity集成', link: '/account/native-general/unity' },
-                { text: 'Unreal集成', link: '/account/native-general/unreal' },
+                { text: 'Unreal集成', link: '/account/native-general/Unreal' },
                 { text: '案例研究', link: '/account/native-general/case-studies' }
               ]
             },
@@ -105,7 +105,7 @@ export default defineComponent({
                 { text: '介绍', link: '/account/native-selfaccount/introduction' },
                 { text: '从哪里开始', link: '/account/native-selfaccount/where-do-i-start' },
                 { text: 'Unity集成', link: '/account/native-selfaccount/unity' },
-                { text: 'Unreal集成', link: '/account/native-selfaccount/unreal' },
+                { text: 'Unreal集成', link: '/account/native-selfaccount/Unreal' },
                 { text: '案例研究', link: '/account/native-selfaccount/case-studies' }
               ]
             },

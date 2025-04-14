@@ -13,4 +13,4 @@ export default {
 
 <style scoped>
 /* Add component-specific styles here */
-</style> 
+</style>

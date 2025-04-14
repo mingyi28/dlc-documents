@@ -32,8 +32,8 @@
                           {{ detail.text }}
                         </router-link>
                         <div v-else-if="detail.buttons" class="detail-buttons">
-                          <button 
-                            v-for="btn in detail.buttons" 
+                          <button
+                            v-for="btn in detail.buttons"
                             :key="btn.text"
                             @click="handleButtonClick(btn)"
                             :class="['detail-button', btn.type]"
@@ -327,4 +327,4 @@ export default {
   align-items: center;
   justify-content: center;
 }
-</style> 
+</style>

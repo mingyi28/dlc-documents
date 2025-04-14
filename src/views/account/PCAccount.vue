@@ -26,9 +26,9 @@ export default {
         expanded: false, // Set to true if you want it expanded by default
         children: [
           { text: 'Introduction', link: '/mobile/introduction' },
-          { text: 'Where do I start?', link: '/mobile/where-do-i-start' },
+          { text: 'Where do I start?', link: '/mobile/WhereDoIStart' },
           { text: 'Unity', link: '/mobile/unity' },
-          { text: 'Unreal', link: '/mobile/unreal' },
+          { text: 'Unreal', link: '/mobile/Unreal' },
           { text: 'Case Studies', link: '/mobile/case-studies' }
         ]
       },
@@ -71,4 +71,4 @@ export default {
   padding: 20px;
   margin-left: 200px; /* Ensure content is to the right of the sidebar */
 }
-</style> 
+</style>
