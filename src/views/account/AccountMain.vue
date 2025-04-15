@@ -41,7 +41,7 @@ export default defineComponent({
               text: '移动端账号方案',
               expanded: false,
               children: [
-                { text: '介绍', link: '/account/mobile/introduction' },
+                { text: '介绍', link: '/account/mobile/Introduction' },
                 { text: '从哪里开始', link: '/account/mobile/where-do-i-start' },
                 { text: 'Unity集成', link: '/account/mobile/unity' },
                 { text: 'Unreal集成', link: '/account/mobile/unreal' },

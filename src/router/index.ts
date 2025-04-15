@@ -66,81 +66,81 @@ const routes = [
 
   // 移动端账号方案路由
   {
-    path: '/account/mobile/introduction',
+    path: '/account/mobile/Introduction',
     name: 'MobileIntroduction',
     component: () => import('@/views/account/mobile/Introduction.vue')
   },
   {
-    path: '/account/mobile/where-do-i-start',
+    path: '/account/mobile/WhereDoIStart',
     name: 'MobileWhereDoIStart',
     component: () => import('@/views/account/mobile/WhereDoIStart.vue')
   },
   {
-    path: '/account/mobile/unity',
+    path: '/account/mobile/Unity',
     name: 'MobileUnity',
     component: () => import('@/views/account/mobile/Unity.vue')
   },
   {
-    path: '/account/mobile/unreal',
+    path: '/account/mobile/Unreal',
     name: 'MobileUnreal',
     component: () => import('@/views/account/mobile/Unreal.vue')
   },
   {
-    path: '/account/mobile/case-studies',
+    path: '/account/mobile/CaseStudies',
     name: 'MobileCaseStudies',
     component: () => import('@/views/account/mobile/CaseStudies.vue')
   },
 
   // PC端账号方案路由
   {
-    path: '/account/pc/overview',
+    path: '/account/pc/Overview',
     name: 'PCOverview',
     component: () => import('@/views/account/pc/Overview.vue')
   },
   {
-    path: '/account/pc/setup-guide',
+    path: '/account/pc/SetupGuide',
     name: 'PCSetupGuide',
     component: () => import('@/views/account/pc/SetupGuide.vue')
   },
   {
-    path: '/account/pc/integration',
+    path: '/account/pc/Integration',
     name: 'PCIntegration',
     component: () => import('@/views/account/pc/Integration.vue')
   },
   {
-    path: '/account/pc/best-practices',
+    path: '/account/pc/BestPractices',
     name: 'PCBestPractices',
     component: () => import('@/views/account/pc/BestPractices.vue')
   },
   {
-    path: '/account/pc/case-studies',
+    path: '/account/pc/CaseStudies',
     name: 'PCCaseStudies',
     component: () => import('@/views/account/pc/CaseStudies.vue')
   },
 
   // 主机端账号方案路由
   {
-    path: '/account/console/overview',
+    path: '/account/console/Overview',
     name: 'ConsoleOverview',
     component: () => import('@/views/account/console/Overview.vue')
   },
   {
-    path: '/account/console/setup-guide',
+    path: '/account/console/SetupGuide',
     name: 'ConsoleSetupGuide',
     component: () => import('@/views/account/console/SetupGuide.vue')
   },
   {
-    path: '/account/console/integration',
+    path: '/account/console/Integration',
     name: 'ConsoleIntegration',
     component: () => import('@/views/account/console/Integration.vue')
   },
   {
-    path: '/account/console/best-practices',
+    path: '/account/console/BestPractices',
     name: 'ConsoleBestPractices',
     component: () => import('@/views/account/console/BestPractices.vue')
   },
   {
-    path: '/account/console/case-studies',
+    path: '/account/console/CaseStudies',
     name: 'ConsoleCaseStudies',
     component: () => import('@/views/account/console/CaseStudies.vue')
   },
@@ -159,9 +159,9 @@ const routes = [
   //   component: () => import('@/views/account/native-selfaccount/introduction.vue')
   // },
   // {
-  //   path: '/account/native-selfaccount/where-do-i-start',
+  //   path: '/account/native-selfaccount/WhereDoIStart',
   //   name: 'NativeSelfAccountWhereDoIStart',
-  //   component: () => import('@/views/account/native-selfaccount/where-do-i-start.vue')
+  //   component: () => import('@/views/account/native-selfaccount/WhereDoIStart.vue')
   // },
   // {
   //   path: '/account/native-selfaccount/unity',
@@ -174,29 +174,29 @@ const routes = [
   //   component: () => import('@/views/account/native-selfaccount/unreal.vue')
   // },
   // {
-  //   path: '/account/native-selfaccount/case-studies',
+  //   path: '/account/native-selfaccount/CaseStudies',
   //   name: 'NativeSelfAccountCaseStudies',
-  //   component: () => import('@/views/account/native-selfaccount/case-studies.vue')
+  //   component: () => import('@/views/account/native-selfaccount/CaseStudies.vue')
   // },
 
   // 运营工具相关路由
   {
-    path: '/operation/social',
+    path: '/operation/Social',
     name: 'Social',
     component: () => import('@/views/operation/Social.vue')
   },
   {
-    path: '/operation/player-engagement',
+    path: '/operation/PlayerEngagement',
     name: 'PlayerEngagement',
     component: () => import('@/views/operation/PlayerEngagement.vue')
   },
   {
-    path: '/operation/data-insights',
+    path: '/operation/DataInsights',
     name: 'DataInsights',
     component: () => import('@/views/operation/DataInsights.vue')
   },
   {
-    path: '/operation/common-tools',
+    path: '/operation/CommonTools',
     name: 'CommonTools',
     component: () => import('@/views/operation/CommonTools.vue')
   },
@@ -208,12 +208,12 @@ const routes = [
     component: () => import('@/views/operation/social/share/Introduction.vue')
   },
   {
-    path: '/operation/social/share/where-do-i-start',
+    path: '/operation/social/share/WhereDoIStart',
     name: 'social-share-start',
-    component: () => import('@/views/operation/social/share/where-do-i-start.vue')
+    component: () => import('@/views/operation/social/share/WhereDoIStart.vue')
   },
   {
-    path: '/operation/social/share/integration',
+    path: '/operation/social/share/Integration',
     name: 'social-share-integration',
     component: () => import('@/views/operation/social/share/Integration.vue')
   },
@@ -223,21 +223,21 @@ const routes = [
   //   component: () => import('@/views/operation/social/share/best-practices.vue')
   // },
   // {
-  //   path: '/operation/social/share/case-studies',
-  //   name: 'social-share-case-studies',
-  //   component: () => import('@/views/operation/social/share/case-studies.vue')
+  //   path: '/operation/social/share/CaseStudies',
+  //   name: 'social-share-CaseStudies',
+  //   component: () => import('@/views/operation/social/share/CaseStudies.vue')
   // },
 
   // 好友列表路由
   {
-    path: '/operation/social/friends/introduction',
+    path: '/operation/social/friends/Introduction',
     name: 'social-friends-introduction',
     component: () => import('@/views/operation/social/friends/Introduction.vue')
   },
   // {
-  //   path: '/operation/social/friends/where-do-i-start',
+  //   path: '/operation/social/friends/WhereDoIStart',
   //   name: 'social-friends-start',
-  //   component: () => import('@/views/operation/social/friends/where-do-i-start.vue')
+  //   component: () => import('@/views/operation/social/friends/WhereDoIStart.vue')
   // },
   // {
   //   path: '/operation/social/friends/integration',
@@ -250,9 +250,9 @@ const routes = [
   //   component: () => import('@/views/operation/social/friends/best-practices.vue')
   // },
   // {
-  //   path: '/operation/social/friends/case-studies',
-  //   name: 'social-friends-case-studies',
-  //   component: () => import('@/views/operation/social/friends/case-studies.vue')
+  //   path: '/operation/social/friends/CaseStudies',
+  //   name: 'social-friends-CaseStudies',
+  //   component: () => import('@/views/operation/social/friends/CaseStudies.vue')
   // },
 
   // 玩家参与路由
@@ -262,9 +262,9 @@ const routes = [
   //   component: () => import('@/views/operation/player-engagement/announcement/introduction.vue')
   // },
   // {
-  //   path: '/operation/player-engagement/announcement/where-do-i-start',
+  //   path: '/operation/player-engagement/announcement/WhereDoIStart',
   //   name: 'player-engagement-announcement-start',
-  //   component: () => import('@/views/operation/player-engagement/announcement/where-do-i-start.vue')
+  //   component: () => import('@/views/operation/player-engagement/announcement/WhereDoIStart.vue')
   // },
   // {
   //   path: '/operation/player-engagement/announcement/integration',
@@ -277,9 +277,9 @@ const routes = [
   //   component: () => import('@/views/operation/player-engagement/announcement/best-practices.vue')
   // },
   // {
-  //   path: '/operation/player-engagement/announcement/case-studies',
-  //   name: 'player-engagement-announcement-case-studies',
-  //   component: () => import('@/views/operation/player-engagement/announcement/case-studies.vue')
+  //   path: '/operation/player-engagement/announcement/CaseStudies',
+  //   name: 'player-engagement-announcement-CaseStudies',
+  //   component: () => import('@/views/operation/player-engagement/announcement/CaseStudies.vue')
   // },
 
   // 数据洞察路由
@@ -289,9 +289,9 @@ const routes = [
   //   component: () => import('@/views/operation/data-insights/ua/introduction.vue')
   // },
   // {
-  //   path: '/operation/data-insights/ua/where-do-i-start',
+  //   path: '/operation/data-insights/ua/WhereDoIStart',
   //   name: 'data-insights-ua-start',
-  //   component: () => import('@/views/operation/data-insights/ua/where-do-i-start.vue')
+  //   component: () => import('@/views/operation/data-insights/ua/WhereDoIStart.vue')
   // },
   // {
   //   path: '/operation/data-insights/ua/integration',
@@ -304,9 +304,9 @@ const routes = [
   //   component: () => import('@/views/operation/data-insights/ua/best-practices.vue')
   // },
   // {
-  //   path: '/operation/data-insights/ua/case-studies',
-  //   name: 'data-insights-ua-case-studies',
-  //   component: () => import('@/views/operation/data-insights/ua/case-studies.vue')
+  //   path: '/operation/data-insights/ua/CaseStudies',
+  //   name: 'data-insights-ua-CaseStudies',
+  //   component: () => import('@/views/operation/data-insights/ua/CaseStudies.vue')
   // },
 
   // 开发工具路由
@@ -316,9 +316,9 @@ const routes = [
   //   component: () => import('@/views/operation/development/deeplink/introduction.vue')
   // },
   // {
-  //   path: '/operation/development/deeplink/where-do-i-start',
+  //   path: '/operation/development/deeplink/WhereDoIStart',
   //   name: 'development-deeplink-start',
-  //   component: () => import('@/views/operation/development/deeplink/where-do-i-start.vue')
+  //   component: () => import('@/views/operation/development/deeplink/WhereDoIStart.vue')
   // },
   // {
   //   path: '/operation/development/deeplink/integration',
@@ -331,9 +331,9 @@ const routes = [
   //   component: () => import('@/views/operation/development/deeplink/best-practices.vue')
   // },
   // {
-  //   path: '/operation/development/deeplink/case-studies',
-  //   name: 'development-deeplink-case-studies',
-  //   component: () => import('@/views/operation/development/deeplink/case-studies.vue')
+  //   path: '/operation/development/deeplink/CaseStudies',
+  //   name: 'development-deeplink-CaseStudies',
+  //   component: () => import('@/views/operation/development/deeplink/CaseStudies.vue')
   // },
 
   // 文档相关路由
