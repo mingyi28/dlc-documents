@@ -209,7 +209,6 @@ export default defineComponent({
     align-items: center;
     width: 100%;
     padding: 0px 5px;
-    margin-bottom: -5px;
   }
 
   .nav-list {
