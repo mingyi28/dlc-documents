@@ -8,6 +8,23 @@ const routes = [
     component: () => import('@/views/Home.vue')
   },
 
+  // 官方页面路由
+  {
+    path: '/overview',
+    name: 'Overview',
+    component: () => import('@/views/official/Overview.vue')
+  },
+  {
+    path: '/account-solution',
+    name: 'AccountSolution',
+    component: () => import('@/views/official/AccountSolution.vue')
+  },
+  {
+    path: '/news',
+    name: 'News',
+    component: () => import('@/views/official/News.vue')
+  },
+
   // 主要布局组件
   {
     path: '/account-main',
@@ -51,7 +68,7 @@ const routes = [
   {
     path: '/account/mobile/introduction',
     name: 'MobileIntroduction',
-    component: () => import('@/views/account/mobile/introduction.vue')
+    component: () => import('@/views/account/mobile/Introduction.vue')
   },
   {
     path: '/account/mobile/where-do-i-start',
@@ -61,7 +78,7 @@ const routes = [
   {
     path: '/account/mobile/unity',
     name: 'MobileUnity',
-    component: () => import('@/views/account/mobile/unity.vue')
+    component: () => import('@/views/account/mobile/Unity.vue')
   },
   {
     path: '/account/mobile/unreal',
@@ -71,7 +88,7 @@ const routes = [
   {
     path: '/account/mobile/case-studies',
     name: 'MobileCaseStudies',
-    component: () => import('@/views/account/mobile/case-studies.vue')
+    component: () => import('@/views/account/mobile/CaseStudies.vue')
   },
 
   // PC端账号方案路由
@@ -183,23 +200,23 @@ const routes = [
     name: 'CommonTools',
     component: () => import('@/views/operation/CommonTools.vue')
   },
-  //
-  // // 社交功能路由
-  // {
-  //   path: '/operation/social/share/introduction',
-  //   name: 'social-share-introduction',
-  //   component: () => import('@/views/operation/social/share/introduction.vue')
-  // },
-  // {
-  //   path: '/operation/social/share/where-do-i-start',
-  //   name: 'social-share-start',
-  //   component: () => import('@/views/operation/social/share/where-do-i-start.vue')
-  // },
-  // {
-  //   path: '/operation/social/share/integration',
-  //   name: 'social-share-integration',
-  //   component: () => import('@/views/operation/social/share/integration.vue')
-  // },
+
+  // 社交功能路由
+  {
+    path: '/operation/social/share/introduction',
+    name: 'social-share-introduction',
+    component: () => import('@/views/operation/social/share/Introduction.vue')
+  },
+  {
+    path: '/operation/social/share/where-do-i-start',
+    name: 'social-share-start',
+    component: () => import('@/views/operation/social/share/where-do-i-start.vue')
+  },
+  {
+    path: '/operation/social/share/integration',
+    name: 'social-share-integration',
+    component: () => import('@/views/operation/social/share/Integration.vue')
+  },
   // {
   //   path: '/operation/social/share/best-practices',
   //   name: 'social-share-best-practices',
@@ -215,7 +232,7 @@ const routes = [
   {
     path: '/operation/social/friends/introduction',
     name: 'social-friends-introduction',
-    component: () => import('@/views/operation/social/friends/introduction.vue')
+    component: () => import('@/views/operation/social/friends/Introduction.vue')
   },
   // {
   //   path: '/operation/social/friends/where-do-i-start',
@@ -338,22 +355,22 @@ const routes = [
   {
     path: '/reference/overview/introduction',
     name: 'reference-overview-introduction',
-    component: () => import('@/views/reference/overview/introduction.vue')
+    component: () => import('@/views/reference/overview/Introduction.vue')
   },
   {
     path: '/reference/overview/quick-start',
     name: 'reference-overview-quickstart',
-    component: () => import('@/views/reference/overview/quick-start.vue')
+    component: () => import('@/views/reference/overview/QuickStart.vue')
   },
   {
     path: '/reference/overview/architecture',
     name: 'reference-overview-architecture',
-    component: () => import('@/views/reference/overview/architecture.vue')
+    component: () => import('@/views/reference/overview/Architecture.vue')
   },
   {
     path: '/reference/overview/best-practices',
     name: 'reference-overview-bestpractices',
-    component: () => import('@/views/reference/overview/best-practices.vue')
+    component: () => import('@/views/reference/overview/BestPractices.vue')
   },
   // {
   //   path: '/reference/overview/faq',
@@ -365,13 +382,13 @@ const routes = [
   {
     path: '/reference/unity/introduction',
     name: 'reference-unity-introduction',
-    component: () => import('@/views/reference/unity/introduction.vue')
+    component: () => import('@/views/reference/unity/Introduction.vue')
   },
-  // {
-  //   path: '/reference/unity/setup',
-  //   name: 'reference-unity-setup',
-  //   component: () => import('@/views/reference/unity/setup.vue')
-  // },
+  {
+    path: '/reference/unity/setup',
+    name: 'reference-unity-setup',
+    component: () => import('@/views/reference/unity/Setup.vue')
+  },
   // {
   //   path: '/reference/unity/api',
   //   name: 'reference-unity-api',
@@ -419,27 +436,27 @@ const routes = [
   // {
   //   path: '/reference/http/introduction',
   //   name: 'reference-http-introduction',
-  //   component: () => import('@/views/reference/http/introduction.vue')
+  //   component: () => import('@/views/reference/http/Introduction.vue')
   // },
   // {
   //   path: '/reference/http/authentication',
   //   name: 'reference-http-authentication',
-  //   component: () => import('@/views/reference/http/authentication.vue')
+  //   component: () => import('@/views/reference/http/Authentication.vue')
   // },
-  // {
-  //   path: '/reference/http/api-list',
-  //   name: 'reference-http-apilist',
-  //   component: () => import('@/views/reference/http/api-list.vue')
-  // },
+  {
+    path: '/reference/http/api-list',
+    name: 'reference-http-apilist',
+    component: () => import('@/views/reference/http/ApiList.vue')
+  },
   // {
   //   path: '/reference/http/error-codes',
   //   name: 'reference-http-errorcodes',
-  //   component: () => import('@/views/reference/http/error-codes.vue')
+  //   component: () => import('@/views/reference/http/ErrorCodes.vue')
   // },
   // {
   //   path: '/reference/http/examples',
   //   name: 'reference-http-examples',
-  //   component: () => import('@/views/reference/http/examples.vue')
+  //   component: () => import('@/views/reference/http/Examples.vue')
   // },
 
   // Web SDK Section
@@ -494,12 +511,17 @@ const routes = [
   //   path: '/reference/others/glossary',
   //   name: 'reference-others-glossary',
   //   component: () => import('@/views/reference/others/glossary.vue')
-  // }
+  // },
+  {
+    path: '/pntconsole',
+    name: 'PntConsole',
+    component: () => import('@/views/pntconsole/PntConsoleMain.vue')
+  },
 ]
 
 const router = createRouter({
-  history: createWebHistory('/dlc-documents/'),
+  history: createWebHistory(),
   routes
 })
 
-export default router
+export default router 
