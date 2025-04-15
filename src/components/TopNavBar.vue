@@ -3,7 +3,7 @@
     <div class="left-section">
       <div class="logo-container">
         <router-link to="/">
-          <img src="/assets/logo.png" alt="Logo" class="logo" />
+          <img src="@/assets/logo.png" alt="Logo" class="logo" />
         </router-link>
       </div>
       <ul class="nav-menu">
