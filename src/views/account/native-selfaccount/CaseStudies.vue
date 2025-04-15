@@ -48,4 +48,4 @@ export default {
   padding: 20px;
   margin-left: 200px; /* Ensure content is to the right of the sidebar */
 }
-</style>
+</style> 

@@ -1,168 +1,143 @@
 <template>
-  <OperationMain>
-    <div class="getting-started-guide">
-      <section class="page-header">
-        <h1>分享功能快速入门</h1>
-        <p class="page-description">快速了解如何开始使用 LI Pass 分享功能</p>
-      </section>
-
-      <section class="content-section">
-        <h2>准备工作</h2>
-        <div class="steps">
-          <div class="step">
-            <h3>1. 注册开发者账号</h3>
-            <p>在 LI Pass 开发者平台注册账号并创建应用</p>
-          </div>
-          <div class="step">
-            <h3>2. 获取应用凭证</h3>
-            <p>在开发者平台获取 AppID 和 AppKey</p>
-          </div>
-          <div class="step">
-            <h3>3. 配置分享平台</h3>
-            <p>在开发者平台配置需要使用的分享平台信息</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="content-section">
-        <h2>快速开始</h2>
-        <div class="quick-start">
-          <div class="step">
-            <h3>1. 安装 SDK</h3>
-            <div class="code-block">
-              <pre><code>npm install @gamekit/share-sdk --save</code></pre>
-            </div>
-          </div>
-          <div class="step">
-            <h3>2. 初始化 SDK</h3>
-            <div class="code-block">
-              <pre><code>import { ShareSDK } from '@gamekit/share-sdk';
-
-ShareSDK.initialize({
-  appId: 'YOUR_APP_ID',
-  appKey: 'YOUR_APP_KEY'
-});</code></pre>
-            </div>
-          </div>
-          <div class="step">
-            <h3>3. 实现分享功能</h3>
-            <div class="code-block">
+    <OperationMain>
+      <div class="share-start">
+        <h1>从哪里开始</h1>
+        <section>
+          <h2>前置条件</h2>
+          <ul>
+            <li>已完成 SDK 初始化</li>
+            <li>已获取相关平台的 AppID 和 AppSecret</li>
+            <li>已在各分享平台完成应用注册</li>
+          </ul>
+        </section>
+  
+        <section>
+          <h2>快速开始</h2>
+          <ol>
+            <li>
+              <h3>1. 配置分享平台</h3>
+              <p>在控制台中配置各个分享平台的参数：</p>
+              <ul>
+                <li>微信：AppID、AppSecret</li>
+                <li>QQ：AppID、AppKey</li>
+                <li>微博：AppKey、AppSecret</li>
+              </ul>
+            </li>
+            <li>
+              <h3>2. 初始化分享功能</h3>
+              <p>在应用启动时初始化分享功能：</p>
+              <pre><code>ShareSDK.initialize({
+    wechat: {
+      appId: 'your_wechat_appid',
+      appSecret: 'your_wechat_secret'
+    },
+    qq: {
+      appId: 'your_qq_appid',
+      appKey: 'your_qq_appkey'
+    }
+  });</code></pre>
+            </li>
+            <li>
+              <h3>3. 实现分享功能</h3>
+              <p>调用分享接口实现内容分享：</p>
               <pre><code>ShareSDK.share({
-  title: '分享标题',
-  description: '分享描述',
-  imageUrl: 'https://example.com/image.jpg',
-  link: 'https://example.com'
-});</code></pre>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  </OperationMain>
-</template>
-
-<script lang="ts">
-import { defineComponent } from 'vue'
-import OperationMain from '@/views/operation/OperationMain.vue'
-
-export default defineComponent({
-  name: 'ShareGettingStarted',
-  components: {
-    OperationMain
-  }
-})
-</script>
-
-<style lang="scss" scoped>
-.getting-started-guide {
-  margin-bottom: 40px;
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-
-  .page-header {
-    margin-bottom: 40px;
-    
+    platform: 'wechat',
+    type: 'link',
+    title: '分享标题',
+    description: '分享描述',
+    imageUrl: 'share_image_url',
+    link: 'share_link_url'
+  });</code></pre>
+            </li>
+          </ol>
+        </section>
+  
+        <section>
+          <h2>下一步</h2>
+          <ul>
+            <li>查看详细的接入指南</li>
+            <li>了解更多分享类型</li>
+            <li>配置分享回调</li>
+            <li>自定义分享样式</li>
+          </ul>
+        </section>
+      </div>
+    </OperationMain>
+  </template>
+  
+  <script lang="ts">
+  import { defineComponent } from 'vue'
+  import OperationMain from '@/views/operation/OperationMain.vue'
+  
+  export default defineComponent({
+    name: 'ShareWhereDoIStart',
+    components: {
+      OperationMain
+    }
+  })
+  </script>
+  
+  <style lang="scss" scoped>
+  .share-start {
+    padding: 20px;
+  
     h1 {
-      font-size: 32px;
-      font-weight: 600;
-      color: #1a1a1a;
-      margin-bottom: 12px;
+      font-size: 2em;
+      color: #333;
+      margin-bottom: 1em;
     }
-
-    .page-description {
-      font-size: 16px;
-      color: #666;
-      line-height: 1.6;
-    }
-  }
-
-  .content-section {
-    background: #ffffff;
-    border-radius: 8px;
-    padding: 24px;
-    margin-bottom: 24px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-
-    h2 {
-      font-size: 24px;
-      font-weight: 500;
-      color: #1a1a1a;
-      margin-bottom: 16px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid #eee;
-    }
-  }
-
-  .steps {
-    .step {
-      margin-bottom: 20px;
-
-      h3 {
-        font-size: 18px;
-        color: #2c3e50;
-        margin-bottom: 8px;
-      }
-
-      p {
+  
+    section {
+      margin-bottom: 2em;
+  
+      h2 {
+        font-size: 1.5em;
         color: #666;
-        margin: 0;
-        line-height: 1.5;
+        margin-bottom: 0.5em;
       }
-    }
-  }
-
-  .quick-start {
-    .step {
-      margin-bottom: 30px;
-
+  
       h3 {
-        font-size: 18px;
-        color: #2c3e50;
-        margin-bottom: 12px;
+        font-size: 1.2em;
+        color: #666;
+        margin: 1em 0 0.5em;
       }
-
-      .code-block {
-        background: #f8f9fa;
-        border-radius: 8px;
-        padding: 16px;
-        margin-top: 12px;
-
-        pre {
-          margin: 0;
-          code {
-            font-family: 'Courier New', Courier, monospace;
-            color: #333;
+  
+      ul, ol {
+        list-style-type: disc;
+        padding-left: 20px;
+  
+        li {
+          margin: 0.5em 0;
+          color: #666;
+  
+          ul {
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
           }
+        }
+      }
+  
+      ol {
+        list-style-type: decimal;
+      }
+  
+      p {
+        line-height: 1.6;
+        color: #666;
+        margin-bottom: 1em;
+      }
+  
+      pre {
+        background: #f8f9fa;
+        padding: 1em;
+        border-radius: 4px;
+        margin: 1em 0;
+        
+        code {
+          font-family: 'Courier New', Courier, monospace;
+          color: #e83e8c;
         }
       }
     }
   }
-}
-
-@media (max-width: 768px) {
-  .getting-started-guide {
-    padding: 16px;
-  }
-}
-</style> 
+  </style> 
