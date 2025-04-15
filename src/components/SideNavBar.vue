@@ -32,8 +32,8 @@
                           {{ detail.text }}
                         </router-link>
                         <div v-else-if="detail.buttons" class="detail-buttons">
-                          <button
-                            v-for="btn in detail.buttons"
+                          <button 
+                            v-for="btn in detail.buttons" 
                             :key="btn.text"
                             @click="handleButtonClick(btn)"
                             :class="['detail-button', btn.type]"
@@ -100,7 +100,7 @@ export default {
   padding: 60px 10px 10px;
   box-shadow: 2px 0 5px rgba(0,0,0,0.1);
   position: fixed;
-  top: 60px;
+  top: 120px;
   left: 0;
   transition: width 0.3s ease;
 }
@@ -139,7 +139,6 @@ export default {
 .divider {
   height: 1px;
   background-color: #a9a9a9;
-  margin: 5px 0;
 }
 
 .nav-item {
@@ -156,7 +155,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 12px;
+  padding: 10px 12px;
   color: #333;
   width: 100%;
   cursor: pointer;
@@ -164,7 +163,7 @@ export default {
   background-color: transparent;
   border-radius: 6px;
   margin: 0;
-  font-weight: 500;
+  font-weight: normal;
 }
 
 .nav-item .menu-text:hover {
@@ -190,7 +189,7 @@ export default {
 .submenu .nav-item .menu-text:hover,
 .submenu .sub-item:hover {
   background-color: rgba(0, 123, 255, 0.1);
-  color: #333;
+  color: #007bff;
 }
 
 .details-menu {
@@ -267,6 +266,7 @@ export default {
   margin-left: 8px;
   transition: transform 0.3s ease;
   color: #6c757d;
+  font-weight: normal;
 }
 
 .slide-enter-active,
@@ -327,4 +327,4 @@ export default {
   align-items: center;
   justify-content: center;
 }
-</style>
+</style> 

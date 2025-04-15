@@ -70,20 +70,6 @@
           </ul>
         </li>
       </ul>
-      <div class="nav-tools">
-        <select v-model="currentLanguage" class="language-select">
-          <option v-for="lang in languages" :key="lang.value" :value="lang.value">
-            {{ lang.label }}
-          </option>
-        </select>
-        <input 
-          type="text" 
-          v-model="searchQuery" 
-          class="search-input" 
-          placeholder="搜索..."
-          @input="handleSearch"
-        >
-      </div>
     </div>
   </nav>
 </template>
@@ -111,16 +97,10 @@ export default defineComponent({
   },
   data() {
     return {
-      currentLanguage: 'zh',
-      searchQuery: '',
       breadcrumbInfo: {
         section: '',
         subsection: ''
       },
-      languages: [
-        { value: 'zh', label: '中文' },
-        { value: 'en', label: 'English' }
-      ],
       navigation: [
         {
           title: '概述',
@@ -149,22 +129,16 @@ export default defineComponent({
           link: '/reference/reference'
         },
         {
+          title: 'PNTConsole',
+          link: '/pntconsole'
+        },
+        {
           title: 'Sample',
           link: '/docs/sample'
         }
       ]
     }
   },
-  // mounted() {
-  //   window.addEventListener('updateBreadcrumb', ((e: CustomEvent<BreadcrumbDetail>) => {
-  //     this.handleBreadcrumbUpdate(e);
-  //   }) as EventListener);
-  // },
-  // beforeUnmount() {
-  //   window.removeEventListener('updateBreadcrumb', ((e: CustomEvent<BreadcrumbDetail>) => {
-  //     this.handleBreadcrumbUpdate(e);
-  //   }) as EventListener);
-  // },
   methods: {
     handleBreadcrumbUpdate(event: CustomEvent<BreadcrumbDetail>) {
       this.breadcrumbInfo = event.detail;
@@ -175,21 +149,26 @@ export default defineComponent({
       }
 
       if (link === '/account-main') {
-        return this.route.path.startsWith('/account/')
+        return this.route.path.startsWith('/account')
       }
 
       if (link === '/operation-main') {
-        return this.route.path.startsWith('/operation/')
+        return this.route.path.startsWith('/operation')
       }
 
       if (link === '/reference/reference') {
-        return this.route.path.startsWith('/reference/')
+        return this.route.path.startsWith('/reference')
       }
 
-      return this.route.path === link
-    },
-    handleSearch() {
-      console.log('Searching:', this.searchQuery)
+      if (link === '/pntconsole') {
+        return this.route.path.startsWith('/pntconsole')
+      }
+
+      if (link === '/docs/sample') {
+        return this.route.path.startsWith('/docs/sample')
+      }
+
+      return this.route.path.startsWith(link)
     }
   }
 })
@@ -199,24 +178,27 @@ export default defineComponent({
 .navbar {
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 0 20px;
+  padding: 0 0px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   height: auto;
-  position: sticky;
-  top: 0;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
   z-index: 1000;
 
   .breadcrumb {
-    font-size: 14px;
-    color: #666;
-    margin: 10px 0;
-    padding: 5px 0;
+    font-size: 20px;
+    color: #007bff;
+    margin: 0px 20px;
+    padding: 5px 5px;
+    margin-bottom: 5px;
 
     span {
       &:not(:last-child) {
-        color: #999;
+        color: #007bff;
       }
     }
   }
@@ -226,13 +208,13 @@ export default defineComponent({
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    padding: 0px 5px;
+    margin-bottom: -5px;
   }
 
   .nav-list {
     display: flex;
     list-style: none;
-    margin: 0;
-    padding: 0;
     flex-grow: 1;
 
     > li {
@@ -242,7 +224,6 @@ export default defineComponent({
       > a {
         color: #333;
         text-decoration: none;
-        padding: 20px 0;
         display: inline-block;
         position: relative;
 
@@ -306,31 +287,6 @@ export default defineComponent({
       }
     }
   }
-
-  .nav-tools {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-
-    .language-select {
-      padding: 8px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      background: #fff;
-    }
-
-    .search-input {
-      padding: 8px 12px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      width: 200px;
-
-      &:focus {
-        outline: none;
-        border-color: #007bff;
-      }
-    }
-  }
 }
 
 @media (max-width: 768px) {
@@ -354,16 +310,6 @@ export default defineComponent({
           box-shadow: none;
           padding-left: 20px;
         }
-      }
-    }
-
-    .nav-tools {
-      width: 100%;
-      padding: 10px 0;
-      flex-direction: column;
-
-      .search-input {
-        width: 100%;
       }
     }
   }
